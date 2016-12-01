@@ -1,9 +1,8 @@
      .main
      {
-         margin:0 auto; /* по центру */
+         margin:0 auto; 
          width:800px;
         background-color: #DEB887;
-        clear: both;
      }
      .main >header
      {
@@ -26,18 +25,13 @@
          text-align: center;
          border-radius: 15%;
          box-shadow:  7px 5px 9px rgba(0,0,0,.5);
-
-     }
-    .main .header_menu ul
-     {
-              overflow: auto; 
      }
      .main .header_menu li
      {
-         float: left;
-          width:30%;
-          list-style-type: none;
-          text-align: center;
+        display: inline-block;
+         width:30%;
+         list-style-type: none;
+         text-align: center;
      }
      .main:hover img
       {
@@ -53,11 +47,11 @@
         transition: 1s linear 1s;
      }
      .main > section
-     {     
+     {    
          background-color:#FFF8DC;
          height: 500px;
-         border: dashed plum;
-     
+         border: dashed plum; 
+         display: flex;  
      }
      .main  p
      {
@@ -67,30 +61,45 @@
      }
      .main > section > .left_bar
      {
-        float: left;
-         width:20%; 
+         width:100px; 
+         display: flex;
+         flex-direction: column;
          text-align: center;
-         padding-left: 0;      
+         padding: 0;      
      }
       .main > section > .left_bar li
      {
-      list-style-type: none;
+      list-style-type: none;      
      }
+     .main > section > .right_bar
+     {   
+         margin: 0 auto; 
+         width: 700px;
+         display: flex;
+         flex-direction: column;
+     }   
      .main > section > .right_bar h3
      {
          text-align: center;
          color:#9932CC;
         font-weight: bold;
-     }
-     .main > section > .right_bar
-     {   
-         margin: 0 auto; 
-     }     
-     .main > section > .right_bar .content
-     {
-         float: left;
-         width:60%;       
+     }   
+     .main > section > .right_bar > .content
+     {     
          text-align:center;
+         padding: 0;
+         width: 500px;
+     }
+       .main > section > .right_bar > .extra
+     {
+         text-align: center; 
+         align-self: flex-end;
+         padding: 0; 
+         width: 100px;
+     }
+      .main > section > .right_bar .extra li
+     {
+      list-style-type: none;
      }
       .main > section > .right_bar .loader-container {
         position: absolute;
@@ -114,20 +123,15 @@
     transform: translateY(-600px);
   }
 }
- .main > section > .right_bar .loader {
-  animation: load 8s steps(6, end) infinite;
+ .main > section > .right_bar .loader 
+    {
+        animation: load 8s steps(6, end) infinite;
+    }
+     .main  > footer > h5
+{
+    text-align:center;
+    font-style: italic;
 }
-
-      .main > section > .right_bar .extra
-     {
-        float: right;
-         width:10%;
-         text-align: center;     
-     }
-      .main > section > .right_bar .extra li
-     {
-      list-style-type: none;
-     }
     .main  > footer > .more_info #fix
      {
          background-color: #E6E6FA;
@@ -140,31 +144,58 @@
          text-align: center;
          border-radius: 15%;
          box-shadow:  15px 0 15px rgba(0,0,0,.5);
-
-
-     }
+    }
     .main .more_info 
     {
         background-color: #D2B48C;
-        margin: 5% 15% 5% 15%;
+        margin: 0 15% 5% 15%;
         border: dashed plum;
-        height: 200px;        
+        height: 150px; 
+        display: flex;
+        justify-content: center;
     }
-
-.main h5
-{
-    text-align:center;
-    font-style: italic;
-}
 .main .more_info .col1, .col2, .col3
 {
-    width: 30%;
-    float: left;
     text-align: center;
 }
 .main .more_info .col1 li, .col2 li, .col3 li
 {
     list-style-type: none;
 }
+
+    @media (min-width: 800px) and (max-width: 1200px) and (width: 100%) {
+         .main > section
+         {
+             width: 100%;
+         }
+        .main > section > .left_bar
+     {
+         width:20%; 
+     }
+     .main > section > .right_bar
+     {   
+         width: 80%;
+         flex-direction: column;
+     } 
+     .main > section > .right_bar > .content
+     {     
+         width: 70%;
+     }
+     .main .more_info 
+    {
+        margin: 0 15% 5% 15%;
+    }
+     .main .more_info .col1, .col2, .col3
+{
+    width: 30%;
+    text-align: center;
+} 
+.main  > footer > .more_info #fix
+     {
+         position: fixed;
+         left: 45%;
+     }
+    } 
+
 
 
